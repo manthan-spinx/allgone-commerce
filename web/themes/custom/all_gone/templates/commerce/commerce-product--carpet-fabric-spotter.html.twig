@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<section class="cmn-banner pr-detail-banner">
+<div id="product-39" class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 text-center hero-image order-lg2">
+        <div class="images">
+          <figure class="woocommerce-product-gallery__wrapper">
+            <div data-thumb="{{file_url(product.variation_field_image['#items'].0.entity.uri.value)}}" class="woocommerce-product-gallery__image">
+            	{{product.variation_field_image}}
+            	{#<a href=""><img width="492" height="1296" src="{{product.variation_field_image|render|striptags|trim}}" class="wp-post-image" title="All-Gone® Carpet &amp; Fabric Spotter" /></a>#}
+
+            </div>
+          </figure> 
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1 pl-4 pl-sm-3">
+        <h1 class="product_title entry-title">{{product.title}}</h1>
+        <div class="product_meta">
+          <h5><span class="sku_wrapper"> <span class="sku">{{ product.variation_sku }}</span></span>
+          </h5>
+          <div>
+            <div class="woocommerce-product-details__short-description">
+             {{product.body}}
+            </div>
+           {{product.variations}}
+           {{ product.variation_price }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+<section class="pr-feature">
+  <div class="container">
+    <div class="row">
+	  {{product.field_feature}}
+    </div>
+  </div>
+</section>
