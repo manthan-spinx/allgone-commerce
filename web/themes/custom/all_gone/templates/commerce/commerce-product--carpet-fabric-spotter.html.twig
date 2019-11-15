@@ -27,6 +27,7 @@
         <div class="images">
           <figure class="woocommerce-product-gallery__wrapper">
             <div data-thumb="{{file_url(product.variation_field_image['#items'].0.entity.uri.value)}}" class="woocommerce-product-gallery__image">
+              {% set product_image_url = file_url(product.variation_field_image['#items'].entity.uri.value) %}
             	{{product.variation_field_image}}
             	{#<a href=""><img width="492" height="1296" src="{{product.variation_field_image|render|striptags|trim}}" class="wp-post-image" title="All-Gone® Carpet &amp; Fabric Spotter" /></a>#}
 
