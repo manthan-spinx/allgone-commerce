@@ -89,7 +89,8 @@
         </div>
         <div class="col-12 col-md-6 col-lg-5 offset-lg-1 pl-4 pl-sm-3">
           <h1>{{ details.getFieldCollectionItem().field_title.value }}</h1>
-          <p>{{ details.getFieldCollectionItem().field_body.value|raw|render|striptags }}</p>
+          {% set desc2 = details.getFieldCollectionItem().field_body.value|render|striptags|trim %}
+          <p>{{ desc2 |convert_encoding('UTF-8', 'HTML-ENTITIES') | raw }}</p>
         </div>
       </div>
     </div>
@@ -103,7 +104,8 @@
           <div class="row">
             <div class="col-md-6 col-xl-5">
               <h2>{{ details.getFieldCollectionItem().field_title.value }}</h2>
-              <p>{{ details.getFieldCollectionItem().field_body.value|raw|render|striptags }}</p>
+              {% set desc = details.getFieldCollectionItem().field_body.value|render|striptags|trim %}
+              <p>{{ desc |convert_encoding('UTF-8', 'HTML-ENTITIES') | raw }}</p>
               <p>&nbsp;</p>
               <a href="{{ details.getFieldCollectionItem().field_link.0.url }}" class="btn btn-secondary">{{ details.getFieldCollectionItem().field_link.0.title }}</a>
             </div>

@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Two column template for the checkout form.
+ *
+ * Available variables:
+ * - form: The form.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="col-lg-6">
+  <div id="customer_details">
+    {{ form.contact_information }}
+    {{form.contact_information_email}}
+    {{form.contact_information_email}}
+    {{form.contact_information_email}}
+    {{form.contact_information_email}}
+    {{form.contact_information_email}}
+    {{ form.shipping_information }}
+  </div>
+</div>
+<div class="col-lg-6">
+  <h3 id="order_review_heading">Your order</h3>
+  <div id="order_review" class="woocommerce-checkout-review-order">
+    {{ form.sidebar }}
+    {{ form.payment_information }}
+    {{ form.actions }}
+  </div>
+</div>

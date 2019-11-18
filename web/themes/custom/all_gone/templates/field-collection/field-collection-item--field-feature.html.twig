@@ -32,6 +32,9 @@
   <div class="feature-icn">
     <img src="{{content.field_icon|render|striptags|trim}}" height="54" width="54">
   </div>
-  <h3>{{content.field_title|render|striptags|trim}}</h3>
-  {{content.field_description|render|striptags|trim}}
+  {% set title = content.field_title|render|striptags|trim %}
+  <h3>{{ title |convert_encoding('UTF-8', 'HTML-ENTITIES') | raw }}</h3>
+  {% set desc = content.field_description|render|striptags|trim %}
+  {{ desc |convert_encoding('UTF-8', 'HTML-ENTITIES') | raw }}
+
 </div>

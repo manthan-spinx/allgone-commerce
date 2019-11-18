@@ -4,3 +4,21 @@
  * @file
  * Functions to support theming in the Stellus-capital theme.
  */
+
+function all_gone_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+
+	if ($form_id == 'commerce_checkout_flow_multistep_default') {
+		$form['#attributes']['class'][] = 'row checkout woocommerce-checkout';
+		$form['payment_information']['#prefix'] = '<div id="payment" class="woocommerce-checkout-payment"><ul class="wc_payment_methods payment_methods methods"><li class="wc_payment_method payment_method_authorize_net_cim_credit_card">';
+		$form['payment_information']['#postfix'] = '</li></ul></div>';
+
+	}
+		// print_r("<pre>");
+		// dump($form_id);
+		// exit;
+	if ($form_id == 'views_form_commerce_cart_form_default_10') {
+		$form['#attributes']['class'][] = 'row';
+	}
+
+}

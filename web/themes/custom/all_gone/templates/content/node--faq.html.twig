@@ -96,7 +96,8 @@
           <ul class="list-unstyled masonry-with-columns">
             <li>
               <h3>{{ details.getFieldCollectionItem().field_title.value|raw|render|striptags }}</h3>
-              <p><span>{{ details.getFieldCollectionItem().field_body.value|raw|render|striptags }}</span></p>
+              {% set desc = details.getFieldCollectionItem().field_body.value|render|striptags|trim %}
+              <p><span>{{ desc |convert_encoding('UTF-8', 'HTML-ENTITIES') | raw }}</span></p>
             </li>
           </ul>
         </div>
