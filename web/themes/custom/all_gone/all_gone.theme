@@ -14,11 +14,19 @@ function all_gone_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 		$form['payment_information']['#postfix'] = '</li></ul></div>';
 
 	}
-		// print_r("<pre>");
-		// dump($form_id);
-		// exit;
-	if ($form_id == 'views_form_commerce_cart_form_default_10') {
-		$form['#attributes']['class'][] = 'row';
+	//$form['output'][0]['#view']['result'][0]['order_id']
+		//dump($form['output'][0]['#view']->result[0]->order_id);
+		//$order_id = $form['output'][0]['#view']->result[0]->order_id;
+		//$new_form_id = 'views-form-commerce-cart-form-default-'.$order_id;
+
+	if(isset($form['output'][0]['#view']->storage)){
+		$new_id = $form['output'][0]['#view']->storage->id();
+		if ($new_id == 'commerce_cart_form') {
+			$form['#attributes']['class'][] = 'row';
+		}
 	}
 
+}
+function all_gone_preprocess_commerce_cart_block(&$variables) {
+  $variables['icon']['#uri'] = drupal_get_path('module', 'commerce') . '/icons/bebebe/cart-ico.png';
 }
