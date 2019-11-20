@@ -4266,19 +4266,35 @@ input[type="button"].btn-block {
     width: 1px;
     height: 100%;
     background: #e7eef5;
-	left: -15px;
 }
-.field--name-total-price{
-	margin-left: 8.33333%;
-	flex: 0 0 25%;
-    max-width: 25%;
+.view-commerce-checkout-order-summary .views-view-table {
+	font-size: 14px;
+    line-height: 20px;
+    color: #566470;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 400 !important;
 }
-@media (max-width:992px){
-	.field--name-total-price{
-	margin-left: 0px;
-	flex: 0 0 100%;
-	max-width:100%;
+.view-commerce-checkout-order-summary{
+	border: 1px solid rgba(0,0,0,.1)
 }
+.views-view-table tr{
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding:15px;
+	display:block;
+}
+.views-field-total-price__number{
+	    font-size: 18px;
+    font-weight: 400;
+    font-family: "Libre Baskerville", serif;
+    line-height: 24px;
+    color: black;
+
+}
+.view-commerce-checkout-order-summary .field--type-commerce-price:before{
+	content:normal;
+}
+.field--name-field-image img {
+    display: block;
 }
 .form-number{
 	text-align:center;
@@ -4291,6 +4307,10 @@ input[type="button"].btn-block {
     text-decoration: underline !important;
     font-weight: 400 !important;
 	padding-left:0px !important;
+}
+.layout-region-checkout-main,.layout-region-checkout-secondary{
+	float:none;
+	width:100%;
 }
 
 .delete-order-item:hover{
@@ -4305,7 +4325,7 @@ input[type="button"].btn-block {
     border-width: 0px 0px 4px 0px !important;
 	color: #172B3B;
 }
-.wc_payment_method .form-wrapper .js-form-submit,.form-actions .button--add-to-cart{
+.form-wrapper .js-form-submit,.form-actions .button--add-to-cart{
   background-color: #172B3B !important;
   color:white !important;
   padding: 19px 22px;
@@ -4327,7 +4347,7 @@ input[type="button"].btn-block {
 .field--type-string{
 	cursor:pointer;
 }
-.wc_payment_method .form-wrapper .js-form-submit:hover,.form-actions .button--add-to-cart:hover{
+.form-wrapper .js-form-submit:hover,.form-actions .button--add-to-cart:hover{
   box-shadow: 0 0 40px 0 #566470 !important;
 }
 .card-head .product-total{
