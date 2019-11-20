@@ -10,12 +10,12 @@
  */
 #}
 <div class="layout-checkout-form clearfix">
-  <div class="layout-region layout-region-checkout-main">
-    <div class="checkoutform-one">
+  <div class="layout-region layout-region-checkout-main row">
+    <div class="col-lg-7">
     {{ form|without('sidebar', 'actions') }}
     </div>
   </div>
-  <div class="checkoutform-two">
+  <div class="col-lg-5">
     <div class="layout-region layout-region-checkout-secondary">
       <h3>{% trans %} Order Summary {% endtrans %}</h3>
       {{ form.sidebar }}

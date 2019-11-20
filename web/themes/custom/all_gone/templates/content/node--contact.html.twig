@@ -97,8 +97,8 @@
           {% set number = content.field_phone.0.value %}
           {% set number = number|replace({'-' : ''}) %}   
           <p>{{ content.field_phone.fieldDefinition.label }} <strong><a href="tel:{{ number }}">{{ content.field_phone.0 }}</a></strong></p>
-          <p>{{ content.field_fax.fieldDefinition.label }} <strong>{{ content.field_fax }}</strong></p>
-          <p>{{ content.field_email_address.fieldDefinition.label }} <strong><a href="mailto:{{ content.field_email_address }}"><u>{{ content.field_email_address|raw|render|trim|striptags }}</u></a></strong></p>
+          <p>{{ content.field_fax.fieldDefinition.label|render|striptags|trim }} <strong>{{ content.field_fax|render|striptags|trim }}</strong></p>
+          <p>{{ content.field_email_address.fieldDefinition.label }} <strong><a href="mailto:{{ content.field_email_address }}"><u>{{ content.field_email_address|render|striptags|trim }}</u></a></strong></p>
         </div>
         <div class="col-lg-3">
           <h3>{{ content.field_address.fieldDefinition.label }}</h3>
@@ -118,17 +118,17 @@
             <div class="col-lg-4">
               {% set number = content.field_phone.0|render %}
               {% set number = number|replace({'-' : ''}) %} 
-              <p>Phone <strong><a href="tel:{{ number }}">{{ content.field_phone.0 }}</a></strong></p>
-              <p>Fax <strong>{{ content.field_fax }}</strong></p>
+              <p>{{ content.field_phone['#title'] }} <strong><a href="tel:{{ number }}">{{ content.field_phone.0 }}</a></strong></p>
+              <p>{{ content.field_fax['#title'] }} <strong>{{ content.field_fax }}</strong></p>
               {% set email = content.field_email_address.0|render %}
               {% set email = email|lower %} 
-              <p>Email Address <strong><a href="mailto:{{ email }}"><u>{{ content.field_email_address }}</u></a></strong></p>
+              <p>{{ content.field_email_address['#title']|render|striptags|trim }}<strong><a href="mailto:{{ email }}"><u>{{ content.field_email_address }}</u></a></strong></p>
             </div>
             <div class="col-lg-3">
-              <h3>Address</h3>
-              <p>{{ content.field_address }}</p>
-              <h3>Hours of Operation</h3>
-              <p>{{ content.field_hours_of_operation }}</p>
+              <h3>{{ content.field_address['#title'] }}</h3>
+              <p>{{ content.field_address|render|striptags|trim }}</p>
+              <h3>{{ content.field_hours_of_operation['#title'] }}</h3>
+              <p>{{ content.field_hours_of_operation|render|striptags|trim }}</p>
             </div>
             <div class="col-lg-5 text-left text-lg-right contact-img">
               <img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" width="407" height="503" alt="contact-hero">
