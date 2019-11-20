@@ -269,11 +269,11 @@ var $ = jQuery.noConflict();
 
 $(function(){
     $(".minus").click(function () {
-        var x = $(this).siblings(".input-text").val();
-        $(this).siblings(".input-text").val(Number(x) - 1);
+        var x = $(this).siblings(".form-number").val();
+        $(this).siblings(".form-number").val(Number(x) - 1);
     });
     $(".plus").click(function () {
-        var x = $(this).siblings(".input-text").val();
-        $(this).siblings(".input-text").val(Number(x) + 1);
+        var x = $(this).siblings(".form-number").val();
+        $(this).siblings(".form-number").val(Number(x) + 1);
     });
 }); 
