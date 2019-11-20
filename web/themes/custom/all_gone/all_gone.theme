@@ -30,3 +30,11 @@ function all_gone_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 function all_gone_preprocess_commerce_cart_block(&$variables) {
   $variables['icon']['#uri'] = drupal_get_path('module', 'commerce') . '/icons/bebebe/cart-ico.png';
 }
+
+function all_gone_preprocess_html(&$variables) {
+	$status = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
+	if ($status && $status->getStatusCode() == 404){
+  		$variables['attributes']['class'][] = 'error404';
+	}
+	
+}

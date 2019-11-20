@@ -32,12 +32,12 @@
 <div class="woocommerce-cart-form__cart-item cart_item">
         <div class="row">
           <div class="col-md-2 col-3 product-thumbnail">
-            <a href="product.html">
+            <a href="{{ url('<front>') }}product">
               <img width="304" height="800" src="{{ fields.field_image.content }}">
             </a>
           </div>
           <div class="col-md-4 col-9 product-name">
-            <a class="h4" href="product.html">{{ fields.purchased_entity_1.content }}</a><br>
+            <a class="h4" href="{{ url('<front>') }}product">{{ fields.purchased_entity_1.content }}</a><br>
             <small class="product-sku">{{ fields.sku.content }}</small></div>
           <div class="col-md-4 col-8 product-quantity">
             {#<div class="quantity">

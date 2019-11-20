@@ -43,13 +43,13 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
-    'col-lg-4',
   ]
 %}
 {%
   set title_classes = [
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
+
   ]
 %}
 

@@ -256,3 +256,13 @@ var $ = jQuery.noConflict();
       });
     })
     var slider = new BeerSlider(document.getElementById("beer-slider"));
+
+(function ($, Drupal) {
+	var project_path = drupalSettings.path.baseUrl;
+	var fullpath = window.location.href;
+	var res = fullpath.split("/");
+	var lastEl = res.slice(-1)[0];
+	if(lastEl == 'cart'){
+		$('div.field--name-total-price').addClass('col-lg-4');
+	}
+})(jQuery, Drupal);
