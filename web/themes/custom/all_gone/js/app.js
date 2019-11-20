@@ -266,3 +266,14 @@ var $ = jQuery.noConflict();
 		$('div.field--name-total-price').addClass('col-lg-4');
 	}
 })(jQuery, Drupal);
+
+$(function(){
+    $(".minus").click(function () {
+        var x = $(this).siblings(".input-text").val();
+        $(this).siblings(".input-text").val(Number(x) - 1);
+    });
+    $(".plus").click(function () {
+        var x = $(this).siblings(".input-text").val();
+        $(this).siblings(".input-text").val(Number(x) + 1);
+    });
+}); 

@@ -4236,6 +4236,40 @@ input[type="button"].btn-block {
   width: 100%;
   margin:10px 0px;
 }
+.quantity-box input[type=number]::-webkit-inner-spin-button,
+      .quantity-box  input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+.quantity-box{
+	display: inline-block;
+    border: 1px solid;
+    padding: 5px 6px;
+	margin-left: 15px;
+}
+.quantity-box input{
+	border:none;
+	text-align:center;
+	background:none;
+	outline:none;
+}
+.quantity-box input{
+	background-repeat:no-repeat;
+	background-position:center center;
+	padding:0px 15px;
+}
+.quantity-box .minus,.quantity-box .plus{
+	width: 40px;
+    height: 15px;
+}
+.quantity-box .minus{
+	background-image:url(../img/minus.svg);
+}
+.quantity-box .plus{
+	background-image:url(../img/plus.svg);
+}
 .layout-region-checkout-main{
 	padding-right:0px;
 }
