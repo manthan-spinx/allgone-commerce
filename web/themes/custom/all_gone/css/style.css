@@ -4234,6 +4234,10 @@ input[type="button"].btn-block {
 }
 .js-form-item{
   width: 100%;
+  margin:10px 0px;
+}
+.layout-region-checkout-main{
+	padding-right:0px;
 }
 .checkout-order-summary table{
   width: 100%;
@@ -8013,7 +8017,6 @@ p {
   color: #566470;
   font-family: "Libre Baskerville", serif;
   font-size: 18px;
-  line-height: 24px;
   padding: 17px 20px;
   height: auto;
   font-weight: normal;
@@ -8021,10 +8024,17 @@ p {
   background-color: #ffffff; }
   .form-control:focus {
     background-color: #ffffff; }
-
 .textarea label {
   color: #000000; }
-
+input{
+	line-height:22px !important;
+}
+.form-required{
+	display:block;
+}
+select{
+	width:100%;	
+}
 textarea.form-control {
   height: 150px;
   resize: none; }
