@@ -4243,10 +4243,13 @@ input[type="button"].btn-block {
             appearance: none;
             margin: 0;
         }
+        .quantity-box input[type='number'] {
+    		-moz-appearance:textfield;
+		}
 .quantity-box{
 	display: inline-block;
     border: 1px solid;
-    padding: 5px 6px;
+    padding: 7px 6px;
 	margin-left: 15px;
 }
 .quantity-box input{
@@ -4255,10 +4258,12 @@ input[type="button"].btn-block {
 	background:none;
 	outline:none;
 }
+.quantity-box .form-number{
+	max-width:63px;
+}
 .quantity-box input{
 	background-repeat:no-repeat;
 	background-position:center center;
-	padding:0px 15px;
 }
 .quantity-box .minus,.quantity-box .plus{
 	width: 40px;
