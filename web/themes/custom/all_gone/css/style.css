@@ -12546,3 +12546,8 @@ yx-axis
 	/* ---------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+.slick-initialized .slick-slide {
+    display: block;
+    height: 396px;
+}
